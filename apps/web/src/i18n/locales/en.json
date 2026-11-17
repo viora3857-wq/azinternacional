@@ -1,0 +1,362 @@
+{
+  "common": {
+    "appName": "AZ Internacional",
+    "tagline": "From high school to university, in Brazil and worldwide",
+    "loading": "Loading",
+    "retry": "Try again",
+    "back": "Back",
+    "continue": "Continue",
+    "save": "Save",
+    "saved": "Changes saved.",
+    "cancel": "Cancel",
+    "close": "Close",
+    "signOut": "Sign out",
+    "skipToContent": "Skip to content",
+    "optional": "optional",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "home": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
+  },
+  "nav": {
+    "main": "Main navigation",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "footer": "Legal links"
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "requestId": "Support code: {{id}}",
+    "NETWORK": "No connection to the server. Check your internet and try again.",
+    "UNKNOWN": "Unexpected error. Try again in a moment.",
+    "VALIDATION_FAILED": "Some fields are invalid. Review them and submit again.",
+    "UNAUTHENTICATED": "Your session has ended. Please sign in again.",
+    "FORBIDDEN": "You do not have permission to do this.",
+    "NOT_FOUND": "We could not find what you were looking for.",
+    "RATE_LIMITED": "Too many attempts in a row. Wait a few minutes and try again.",
+    "CSRF_REJECTED": "The request was blocked for security reasons. Reload the page.",
+    "PAYLOAD_TOO_LARGE": "The content you sent is too large.",
+    "MAGIC_LINK_INVALID": "This link has expired or was already used. Request a new one.",
+    "MFA_INVALID_CODE": "Wrong code. Check your authenticator app and enter the current code.",
+    "MFA_CHALLENGE_INVALID": "The verification expired or had too many attempts. Request a new sign-in link.",
+    "MFA_ALREADY_ENABLED": "Two-step verification is already on.",
+    "MFA_NOT_ENABLED": "Two-step verification is not on.",
+    "MFA_SETUP_NOT_STARTED": "Start the setup again.",
+    "ONBOARDING_REQUIRED": "Complete your profile to continue.",
+    "ONBOARDING_ALREADY_DONE": "Your profile is already complete.",
+    "ACCOUNT_CONFIRMATION_MISMATCH": "The email you typed does not match your account.",
+    "LAST_OWNER": "You are the only owner. Transfer the role before deleting your account.",
+    "EMAIL_DELIVERY_FAILED": "We could not send the email right now. Try again in a few minutes.",
+    "INTERNAL": "Server error. We logged the problem; try again in a moment.",
+    "INVALID_CREDENTIALS": "Wrong email or password.",
+    "EMAIL_NOT_VERIFIED": "Your email is not confirmed yet. Open the link we sent or request another one.",
+    "EMAIL_TOKEN_INVALID": "This link has expired or was already used.",
+    "CURRENT_PASSWORD_INVALID": "The current password is wrong."
+  },
+  "validation": {
+    "email": "Enter a valid email.",
+    "displayName": "Use 2 to 80 letters. Numbers and symbols are not allowed.",
+    "code": "The code has 6 digits.",
+    "accept": "You need to accept to continue.",
+    "password": "Use 10 to 128 characters.",
+    "passwordRequired": "Enter your password."
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Use your school email and your password.",
+      "emailLabel": "School email",
+      "passwordLabel": "Password",
+      "forgot": "Forgot my password",
+      "submit": "Sign in",
+      "or": "or",
+      "magicLink": "Get a sign-in link by email",
+      "noAccount": "No account yet?",
+      "register": "Create account",
+      "resend": "Resend confirmation email",
+      "resent": "If the account exists and is not confirmed yet, we sent a new link.",
+      "legal": "By signing in, you confirm you have read the <terms>Terms of use</terms> and the <privacy>Privacy policy</privacy>."
+    },
+    "verify": {
+      "backToLogin": "Request a new link",
+      "missingToken": "This address has no sign-in link. Open the link straight from the email.",
+      "title": "Checking your access",
+      "invalidTitle": "Invalid link"
+    },
+    "mfa": {
+      "title": "Two-step verification",
+      "subtitle": "Open your authenticator app and enter the 6-digit AZ Internacional code.",
+      "codeLabel": "Code",
+      "submit": "Verify",
+      "missing": "Verification was not started. Open the email link again."
+    },
+    "magic": {
+      "title": "Sign in with a link",
+      "subtitle": "We send a sign-in link to your school email, no password needed.",
+      "submit": "Send sign-in link",
+      "sentTitle": "Check your email",
+      "sentBody": "If {{email}} has access to the platform, you will receive a link shortly.",
+      "sentHint": "The link is valid for 15 minutes and works only once. Check your spam folder too.",
+      "useAnother": "Use another email",
+      "withPassword": "Sign in with password"
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Use your school email. We will send a link to confirm it is yours.",
+      "passwordHint": "At least 10 characters. A phrase you can remember is safer than a short, complicated password.",
+      "submit": "Create account",
+      "sentTitle": "Confirm your email",
+      "sentBody": "If {{email}} belongs to a registered school, we sent a confirmation link. It is valid for 24 hours.",
+      "sentHint": "Did not arrive? Check spam or request another link.",
+      "resend": "Resend link",
+      "haveAccount": "Already have an account?",
+      "login": "Sign in"
+    },
+    "verifyEmail": {
+      "title": "Confirming your email",
+      "invalidTitle": "Invalid confirmation link"
+    },
+    "forgot": {
+      "title": "Forgot my password",
+      "subtitle": "Enter your email. If there is an account, we send a link to create a new password.",
+      "submit": "Send link",
+      "sentTitle": "Check your email",
+      "sentBody": "If {{email}} has an account, the link arrives shortly. It is valid for 30 minutes.",
+      "back": "Back to sign in"
+    },
+    "reset": {
+      "title": "Create a new password",
+      "subtitle": "Choose a new password. When you save it, we sign out every open session on all devices.",
+      "passwordLabel": "New password",
+      "submit": "Save new password",
+      "doneTitle": "Password changed",
+      "doneBody": "Done. Sign in with your new password.",
+      "invalidTitle": "Invalid reset link",
+      "newLink": "Request a new link",
+      "login": "Go to sign in"
+    }
+  },
+  "onboarding": {
+    "title": "Complete your profile",
+    "subtitle": "We only ask for what is needed. We do not collect national ID numbers, address, phone or date of birth.",
+    "nameLabel": "What should we call you",
+    "nameHint": "Shown on your dashboard and to your school staff.",
+    "languageLabel": "Platform language",
+    "acceptTerms": "I have read and accept the <doc>Terms of use</doc>.",
+    "acceptPrivacy": "I have read and understood the <doc>Privacy policy</doc>.",
+    "submit": "Finish"
+  },
+  "dashboard": {
+    "greeting": "Hello, {{name}}",
+    "subtitle": "This is your dashboard. Your progress will show up here.",
+    "stepsTitle": "First steps",
+    "stepAccount": "Account created and profile complete",
+    "stepMfa": "Protect your account with two-step verification",
+    "stepMfaDone": "Two-step verification is on",
+    "stepMfaAction": "Set up",
+    "progressTitle": "Your progress",
+    "progressEmptyTitle": "No progress data yet",
+    "progressEmptyBody": "Grade trends, completed exams and your study plan will show up here once those modules are released.",
+    "modulesNotice": "Report card, universities, study plans, exams and career guidance are not available in this version yet."
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": {
+      "title": "Profile",
+      "email": "Email",
+      "school": "School",
+      "role": "Role"
+    },
+    "roles": {
+      "student": "Student",
+      "admin": "Administrator",
+      "owner": "Owner"
+    },
+    "appearance": {
+      "title": "Appearance"
+    },
+    "security": {
+      "title": "Security",
+      "logoutAll": "Sign out of all devices",
+      "logoutAllHint": "Ends every open session, including this one."
+    },
+    "privacy": {
+      "title": "Privacy and data",
+      "policy": "View Privacy policy",
+      "deleteTitle": "Delete my account and my data",
+      "deleteBody": "Deletes your account, sessions, consents and everything linked to it. This cannot be undone.",
+      "deleteButton": "Delete my account",
+      "dialogTitle": "Delete account permanently?",
+      "dialogBody": "To confirm, type your account email: {{email}}",
+      "confirmLabel": "Account email",
+      "confirm": "Delete permanently"
+    },
+    "password": {
+      "titleSet": "Set a password",
+      "titleChange": "Password",
+      "descSet": "Your account has no password yet: today you sign in only through the email link.",
+      "descChange": "Changing the password signs out your other devices.",
+      "current": "Current password",
+      "new": "New password",
+      "submit": "Save password",
+      "done": "Password saved. Other sessions were signed out."
+    }
+  },
+  "mfa": {
+    "title": "Two-step verification",
+    "description": "On top of the email link, asks for a code from an authenticator app (Google Authenticator, Microsoft Authenticator, 1Password and similar).",
+    "on": "On",
+    "off": "Off",
+    "enable": "Turn on",
+    "setupStep1": "1. Scan the QR code with your authenticator app.",
+    "setupManual": "No camera? Type this key into the app:",
+    "setupStep2": "2. Enter the 6-digit code shown in the app.",
+    "qrAlt": "QR code to set up the authenticator app",
+    "confirm": "Confirm and turn on",
+    "enabledToast": "Two-step verification is on. Other sessions were signed out.",
+    "disable": "Turn off",
+    "disableTitle": "Turn off two-step verification",
+    "disableBody": "Enter a current code from your authenticator app to confirm.",
+    "disabledToast": "Two-step verification is off."
+  },
+  "legal": {
+    "draftNotice": "Draft for legal review. Fields in brackets must be filled in before publishing.",
+    "version": "Version of {{date}}",
+    "privacy": {
+      "title": "Privacy policy",
+      "sections": [
+        {
+          "title": "1. Who processes your data",
+          "body": [
+            "AZ Internacional ([TO FILL IN: legal name and company number]) is the controller of the data processed on this platform.",
+            "Data protection officer (DPO): [TO FILL IN: name and contact email]."
+          ]
+        },
+        {
+          "title": "2. What data we collect",
+          "body": [
+            "Your school email, display name, preferred language and the record of your acceptance of these documents (date and version).",
+            "Your password, stored only as an irreversible hash (scrypt). Not even our team can read it.",
+            "Technical security data: sign-in sessions, audit records (what was done and when, with no content) and your IP address turned into a code that cannot be reversed without our secret key.",
+            "We do not collect national ID numbers (CPF, RG), address, phone or date of birth."
+          ]
+        },
+        {
+          "title": "3. Why we use it",
+          "body": [
+            "To let you sign in and keep the account secure; to provide educational guidance on admissions, universities and studies; to meet legal obligations.",
+            "Legal bases (Brazil's LGPD): your consent (art. 7, I); performance of the requested service (art. 7, V); fraud prevention and security (art. 7, IX)."
+          ]
+        },
+        {
+          "title": "4. Who we share it with",
+          "body": [
+            "Only with processors needed to run the service: Supabase (database), Brevo (email delivery), Render (API server), Vercel (website) and Cloudflare (network protection). Once artificial intelligence features are enabled, content sent for analysis will go through OpenRouter and the AI models used.",
+            "Some of these processors handle data outside Brazil (international transfer, LGPD art. 33), under contractual protection clauses.",
+            "We do not sell data or use it for advertising."
+          ]
+        },
+        {
+          "title": "5. How long we keep it",
+          "body": [
+            "Sign-in links are valid for 15 minutes; email confirmation links, 24 hours; password reset links, 30 minutes. Their records are deleted within 30 days. Sessions last up to 7 days.",
+            "Account data and consent records: while the account exists. When you delete the account, everything is erased immediately; audit records stay for up to 12 months with no link to you.",
+            "Report card photos, once that feature exists, will be deleted right after analysis; we will keep only grades and classifications."
+          ]
+        },
+        {
+          "title": "6. Your rights",
+          "body": [
+            "You can confirm and access your data, correct it, request portability, withdraw consent and delete your account (LGPD art. 18).",
+            "You can delete your account yourself in Settings at any time. For other requests, contact the data protection officer."
+          ]
+        },
+        {
+          "title": "7. Teenagers",
+          "body": [
+            "The platform is meant for students aged 13 and older. We process data in the student's best interest (LGPD art. 14), with the student's own consent, and never use it for advertising or commercial profiling."
+          ]
+        },
+        {
+          "title": "8. Security",
+          "body": [
+            "Passwords, links and sessions are stored only as hashes; two-step verification secrets are encrypted; database access is restricted per row, so each student can only reach their own data."
+          ]
+        },
+        {
+          "title": "9. Changes to this policy",
+          "body": [
+            "Every change creates a new dated version. When a change affects how your data is used, we will ask you to accept it again."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "sections": [
+        {
+          "title": "1. The service",
+          "body": [
+            "AZ Internacional is an educational guidance platform for high school students. It does not guarantee admission to any program."
+          ]
+        },
+        {
+          "title": "2. Your account",
+          "body": [
+            "Access uses your school email. The account is personal: do not share your password, sign-in links or verification codes."
+          ]
+        },
+        {
+          "title": "3. Acceptable use",
+          "body": [
+            "Do not try to access other people's data, bypass usage limits, automate access without permission or use the platform for unlawful purposes."
+          ]
+        },
+        {
+          "title": "4. AI-generated content",
+          "body": [
+            "Parts of the content are generated by AI and may contain errors. Cut-off scores, prices and deadlines are estimates: always confirm with official sources before deciding."
+          ]
+        },
+        {
+          "title": "5. Availability",
+          "body": [
+            "We work to keep the service online, but interruptions may happen for maintenance or due to third-party failures."
+          ]
+        },
+        {
+          "title": "6. Termination",
+          "body": [
+            "You can delete your account at any time. We may suspend accounts used in breach of these terms."
+          ]
+        },
+        {
+          "title": "7. Governing law and contact",
+          "body": [
+            "These terms are governed by Brazilian law. Venue: [TO FILL IN]. Contact: [TO FILL IN: support email]."
+          ]
+        }
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The address may have changed or does not exist.",
+    "home": "Go to home"
+  },
+  "password": {
+    "show": "Show password",
+    "hide": "Hide password"
+  }
+}

@@ -1,0 +1,88 @@
+/*
+ * Design tokens da AZ Internacional. Única fonte de cor da interface:
+ * componentes usam só os tokens semânticos (bg, surface, ink, primary...), nunca hex solto.
+ * O contraste de cada par texto/fundo é verificado em src/styles/__tests__/contrast.test.ts.
+ */
+:root {
+  color-scheme: light;
+  --az-bg: #f5f1e8;
+  --az-surface: #fffdf8;
+  --az-surface-2: #ece5d6;
+  --az-ink: #14213d;
+  --az-ink-muted: #4c5566;
+  --az-border: #dcd3c1;
+  --az-border-strong: #857c6c;
+  --az-primary: #1f3f8f;
+  --az-primary-hover: #183374;
+  --az-on-primary: #ffffff;
+  --az-accent: #a63d17;
+  --az-success: #1d6542;
+  --az-success-soft: #e3f0e7;
+  --az-warning: #7d5100;
+  --az-warning-soft: #f7ecd2;
+  --az-danger: #b02a1e;
+  --az-danger-soft: #f8e3df;
+  --az-info-soft: #e4e9f6;
+  --az-focus: #1f3f8f;
+  --az-skeleton: #e6dfcf;
+  --az-shadow: 0 1px 0 rgb(20 33 61 / 0.04), 0 8px 24px -12px rgb(20 33 61 / 0.18);
+  /* Painel de marca: navy nos dois temas (não inverte). */
+  --az-brand: #14213d;
+  --az-on-brand: #f5f1e8;
+  --az-brand-accent: #e0703f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --az-bg: #0e1321;
+    --az-surface: #151c2e;
+    --az-surface-2: #1d2640;
+    --az-ink: #ece7dc;
+    --az-ink-muted: #a8afbf;
+    --az-border: #2b3552;
+    --az-border-strong: #6d789a;
+    --az-primary: #9fb5ff;
+    --az-primary-hover: #bccbff;
+    --az-on-primary: #0e1321;
+    --az-accent: #f0936a;
+    --az-success: #74d3a3;
+    --az-success-soft: #15302a;
+    --az-warning: #f0c46a;
+    --az-warning-soft: #33290f;
+    --az-danger: #ff8f84;
+    --az-danger-soft: #3a1b1d;
+    --az-info-soft: #1b2645;
+    --az-focus: #9fb5ff;
+    --az-skeleton: #222c47;
+    --az-shadow: 0 1px 0 rgb(0 0 0 / 0.3), 0 10px 30px -12px rgb(0 0 0 / 0.6);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --az-bg: #0e1321;
+  --az-surface: #151c2e;
+  --az-surface-2: #1d2640;
+  --az-ink: #ece7dc;
+  --az-ink-muted: #a8afbf;
+  --az-border: #2b3552;
+  --az-border-strong: #6d789a;
+  --az-primary: #9fb5ff;
+  --az-primary-hover: #bccbff;
+  --az-on-primary: #0e1321;
+  --az-accent: #f0936a;
+  --az-success: #74d3a3;
+  --az-success-soft: #15302a;
+  --az-warning: #f0c46a;
+  --az-warning-soft: #33290f;
+  --az-danger: #ff8f84;
+  --az-danger-soft: #3a1b1d;
+  --az-info-soft: #1b2645;
+  --az-focus: #9fb5ff;
+  --az-skeleton: #222c47;
+  --az-shadow: 0 1px 0 rgb(0 0 0 / 0.3), 0 10px 30px -12px rgb(0 0 0 / 0.6);
+  --az-brand: #172440;
+  --az-on-brand: #ece7dc;
+  --az-brand-accent: #f0936a;
+}

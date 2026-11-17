@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@theme inline {
+  --color-bg: var(--az-bg);
+  --color-surface: var(--az-surface);
+  --color-surface-2: var(--az-surface-2);
+  --color-ink: var(--az-ink);
+  --color-ink-muted: var(--az-ink-muted);
+  --color-line: var(--az-border);
+  --color-line-strong: var(--az-border-strong);
+  --color-primary: var(--az-primary);
+  --color-primary-hover: var(--az-primary-hover);
+  --color-on-primary: var(--az-on-primary);
+  --color-accent: var(--az-accent);
+  --color-success: var(--az-success);
+  --color-success-soft: var(--az-success-soft);
+  --color-warning: var(--az-warning);
+  --color-warning-soft: var(--az-warning-soft);
+  --color-danger: var(--az-danger);
+  --color-danger-soft: var(--az-danger-soft);
+  --color-info-soft: var(--az-info-soft);
+  --color-skeleton: var(--az-skeleton);
+  --color-brand: var(--az-brand);
+  --color-on-brand: var(--az-on-brand);
+  --color-brand-accent: var(--az-brand-accent);
+
+  --font-display: 'Fraunces Variable', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Atkinson Hyperlegible Next Variable', 'Segoe UI', system-ui, sans-serif;
+
+  /* Escala tipográfica (razão ~1.2) e espaçamento base 4px vêm do Tailwind. */
+  --text-display: 2.5rem;
+  --text-display--line-height: 1.1;
+  --shadow-card: var(--az-shadow);
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  html {
+    background: var(--az-bg);
+    color: var(--az-ink);
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    min-height: 100dvh;
+    background: var(--az-bg);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 3px solid var(--az-focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--az-info-soft);
+    color: var(--az-ink);
+  }
+  dialog::backdrop {
+    background: rgb(14 19 33 / 0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes az-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

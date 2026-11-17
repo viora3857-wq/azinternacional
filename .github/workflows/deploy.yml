@@ -1,0 +1,73 @@
+name: Deploy
+
+# Só roda depois do CI passar num push para a main. Ordem: migrações -> API (Render) -> front (Vercel).
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    name: Migrações (Supabase)
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'
+    runs-on: ubuntu-24.04
+    environment: production
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - run: npx --yes supabase@2.122.1 link --project-ref "${{ secrets.SUPABASE_PROJECT_REF }}"
+      - run: npx --yes supabase@2.122.1 db push
+
+  api:
+    name: API (Render)
+    needs: migrate
+    runs-on: ubuntu-24.04
+    environment: production
+    steps:
+      - name: Dispara o deploy do commit testado
+        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}&ref=${{ github.event.workflow_run.head_sha }}" > /dev/null
+      - name: Espera a nova versão responder (até 15 min)
+        env:
+          API_HEALTH_URL: ${{ vars.API_HEALTH_URL }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          for i in $(seq 1 90); do
+            v=$(curl -fsS "$API_HEALTH_URL" | jq -r .version || true)
+            if [ "$v" = "$SHA" ]; then echo "API no ar: $v"; exit 0; fi
+            sleep 10
+          done
+          echo "A API não subiu com o commit $SHA. Veja os logs do Render." >&2
+          exit 1
+
+  web:
+    name: Front (Vercel)
+    needs: api
+    runs-on: ubuntu-24.04
+    environment: production
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npx --yes vercel@65.8.0 pull --yes --environment=production --token="$VERCEL_TOKEN"
+      - run: npx --yes vercel@65.8.0 build --prod --token="$VERCEL_TOKEN"
+      - run: npx --yes vercel@65.8.0 deploy --prebuilt --prod --token="$VERCEL_TOKEN"

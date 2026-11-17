@@ -1,0 +1,362 @@
+{
+  "common": {
+    "appName": "AZ Internacional",
+    "tagline": "De la secundaria a la universidad, en Brasil y en el mundo",
+    "loading": "Cargando",
+    "retry": "Intentar de nuevo",
+    "back": "Volver",
+    "continue": "Continuar",
+    "save": "Guardar",
+    "saved": "Cambios guardados.",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "signOut": "Salir",
+    "skipToContent": "Saltar al contenido",
+    "optional": "opcional",
+    "language": "Idioma",
+    "theme": "Tema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "themeSystem": "Sistema",
+    "home": "Inicio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
+  },
+  "nav": {
+    "main": "Navegación principal",
+    "dashboard": "Panel",
+    "settings": "Configuración",
+    "privacy": "Privacidad",
+    "terms": "Términos de uso",
+    "footer": "Enlaces legales"
+  },
+  "errors": {
+    "title": "Algo salió mal",
+    "requestId": "Código para soporte: {{id}}",
+    "NETWORK": "Sin conexión con el servidor. Revisa tu internet e intenta de nuevo.",
+    "UNKNOWN": "Error inesperado. Intenta de nuevo en un momento.",
+    "VALIDATION_FAILED": "Algunos campos no son válidos. Revísalos y envía de nuevo.",
+    "UNAUTHENTICATED": "Tu sesión terminó. Vuelve a entrar.",
+    "FORBIDDEN": "No tienes permiso para hacer esto.",
+    "NOT_FOUND": "No encontramos lo que buscabas.",
+    "RATE_LIMITED": "Demasiados intentos seguidos. Espera unos minutos e intenta de nuevo.",
+    "CSRF_REJECTED": "La solicitud fue bloqueada por seguridad. Recarga la página.",
+    "PAYLOAD_TOO_LARGE": "El contenido enviado es demasiado grande.",
+    "MAGIC_LINK_INVALID": "Este enlace expiró o ya fue usado. Pide uno nuevo.",
+    "MFA_INVALID_CODE": "Código incorrecto. Revisa la app de autenticación y escribe el código actual.",
+    "MFA_CHALLENGE_INVALID": "La verificación expiró o tuvo demasiados intentos. Pide un nuevo enlace de acceso.",
+    "MFA_ALREADY_ENABLED": "La verificación en dos pasos ya está activa.",
+    "MFA_NOT_ENABLED": "La verificación en dos pasos no está activa.",
+    "MFA_SETUP_NOT_STARTED": "Empieza la configuración de nuevo.",
+    "ONBOARDING_REQUIRED": "Completa tu registro para continuar.",
+    "ONBOARDING_ALREADY_DONE": "Tu registro ya está completo.",
+    "ACCOUNT_CONFIRMATION_MISMATCH": "El correo escrito no coincide con el de tu cuenta.",
+    "LAST_OWNER": "Eres el único owner. Transfiere la función antes de eliminar la cuenta.",
+    "EMAIL_DELIVERY_FAILED": "No pudimos enviar el correo ahora. Intenta de nuevo en unos minutos.",
+    "INTERNAL": "Error en el servidor. Ya registramos el problema; intenta de nuevo en un momento.",
+    "INVALID_CREDENTIALS": "Correo o contraseña incorrectos.",
+    "EMAIL_NOT_VERIFIED": "Tu correo aún no está confirmado. Abre el enlace que enviamos o pide otro.",
+    "EMAIL_TOKEN_INVALID": "Este enlace expiró o ya fue usado.",
+    "CURRENT_PASSWORD_INVALID": "La contraseña actual es incorrecta."
+  },
+  "validation": {
+    "email": "Escribe un correo válido.",
+    "displayName": "Usa de 2 a 80 letras. No se aceptan números ni símbolos.",
+    "code": "El código tiene 6 números.",
+    "accept": "Debes aceptar para continuar.",
+    "password": "Usa de 10 a 128 caracteres.",
+    "passwordRequired": "Escribe tu contraseña."
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar",
+      "subtitle": "Usa el correo institucional de tu escuela y tu contraseña.",
+      "emailLabel": "Correo institucional",
+      "passwordLabel": "Contraseña",
+      "forgot": "Olvidé mi contraseña",
+      "submit": "Entrar",
+      "or": "o",
+      "magicLink": "Recibir enlace de acceso por correo",
+      "noAccount": "¿Aún no tienes cuenta?",
+      "register": "Crear cuenta",
+      "resend": "Reenviar correo de confirmación",
+      "resent": "Si la cuenta existe y aún no está confirmada, enviamos un nuevo enlace.",
+      "legal": "Al entrar, declaras que leíste los <terms>Términos de uso</terms> y la <privacy>Política de privacidad</privacy>."
+    },
+    "verify": {
+      "backToLogin": "Pedir un nuevo enlace",
+      "missingToken": "Esta dirección no tiene un enlace de acceso. Abre el enlace directamente desde el correo.",
+      "title": "Verificando tu acceso",
+      "invalidTitle": "Enlace no válido"
+    },
+    "mfa": {
+      "title": "Verificación en dos pasos",
+      "subtitle": "Abre tu app de autenticación y escribe el código de 6 números de AZ Internacional.",
+      "codeLabel": "Código",
+      "submit": "Verificar",
+      "missing": "La verificación no se inició. Abre de nuevo el enlace del correo."
+    },
+    "magic": {
+      "title": "Entrar con enlace",
+      "subtitle": "Te enviamos un enlace de acceso a tu correo institucional, sin contraseña.",
+      "submit": "Enviar enlace de acceso",
+      "sentTitle": "Revisa tu correo",
+      "sentBody": "Si {{email}} tiene acceso a la plataforma, recibirás un enlace en breve.",
+      "sentHint": "El enlace vale 15 minutos y funciona una sola vez. Revisa también la carpeta de spam.",
+      "useAnother": "Usar otro correo",
+      "withPassword": "Entrar con contraseña"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "subtitle": "Usa el correo institucional de tu escuela. Te enviaremos un enlace para confirmar que es tuyo.",
+      "passwordHint": "Mínimo 10 caracteres. Una frase fácil de recordar es más segura que una contraseña corta y complicada.",
+      "submit": "Crear cuenta",
+      "sentTitle": "Confirma tu correo",
+      "sentBody": "Si {{email}} es de una escuela registrada, enviamos un enlace de confirmación. Vale 24 horas.",
+      "sentHint": "¿No llegó? Revisa el spam o pide otro enlace.",
+      "resend": "Reenviar enlace",
+      "haveAccount": "¿Ya tienes cuenta?",
+      "login": "Entrar"
+    },
+    "verifyEmail": {
+      "title": "Confirmando tu correo",
+      "invalidTitle": "Enlace de confirmación no válido"
+    },
+    "forgot": {
+      "title": "Olvidé mi contraseña",
+      "subtitle": "Escribe tu correo. Si hay una cuenta, enviamos un enlace para crear una nueva contraseña.",
+      "submit": "Enviar enlace",
+      "sentTitle": "Revisa tu correo",
+      "sentBody": "Si {{email}} tiene una cuenta, el enlace llega en breve. Vale 30 minutos.",
+      "back": "Volver al inicio de sesión"
+    },
+    "reset": {
+      "title": "Crear nueva contraseña",
+      "subtitle": "Elige una contraseña nueva. Al guardarla, cerramos las sesiones abiertas en todos los dispositivos.",
+      "passwordLabel": "Nueva contraseña",
+      "submit": "Guardar nueva contraseña",
+      "doneTitle": "Contraseña cambiada",
+      "doneBody": "Listo. Entra con tu nueva contraseña.",
+      "invalidTitle": "Enlace de restablecimiento no válido",
+      "newLink": "Pedir un nuevo enlace",
+      "login": "Ir al inicio de sesión"
+    }
+  },
+  "onboarding": {
+    "title": "Completa tu registro",
+    "subtitle": "Solo pedimos lo necesario. No recopilamos documentos de identidad, dirección, teléfono ni fecha de nacimiento.",
+    "nameLabel": "Cómo quieres que te llamemos",
+    "nameHint": "Aparece en tu panel y para el equipo de tu escuela.",
+    "languageLabel": "Idioma de la plataforma",
+    "acceptTerms": "Leí y acepto los <doc>Términos de uso</doc>.",
+    "acceptPrivacy": "Leí y entendí la <doc>Política de privacidad</doc>.",
+    "submit": "Completar registro"
+  },
+  "dashboard": {
+    "greeting": "Hola, {{name}}",
+    "subtitle": "Este es tu panel. Tu progreso aparecerá aquí.",
+    "stepsTitle": "Primeros pasos",
+    "stepAccount": "Cuenta creada y registro completo",
+    "stepMfa": "Protege tu cuenta con verificación en dos pasos",
+    "stepMfaDone": "Verificación en dos pasos activa",
+    "stepMfaAction": "Configurar",
+    "progressTitle": "Tu progreso",
+    "progressEmptyTitle": "Aún no hay datos de progreso",
+    "progressEmptyBody": "La evolución de notas, los exámenes hechos y el plan de estudios aparecerán aquí cuando esos módulos se publiquen.",
+    "modulesNotice": "Boletín, universidades, planes de estudio, exámenes y orientación vocacional aún no están disponibles en esta versión."
+  },
+  "settings": {
+    "title": "Configuración",
+    "profile": {
+      "title": "Perfil",
+      "email": "Correo",
+      "school": "Escuela",
+      "role": "Función"
+    },
+    "roles": {
+      "student": "Estudiante",
+      "admin": "Administrador(a)",
+      "owner": "Owner"
+    },
+    "appearance": {
+      "title": "Apariencia"
+    },
+    "security": {
+      "title": "Seguridad",
+      "logoutAll": "Salir de todos los dispositivos",
+      "logoutAllHint": "Cierra todas las sesiones abiertas, incluida esta."
+    },
+    "privacy": {
+      "title": "Privacidad y datos",
+      "policy": "Ver Política de privacidad",
+      "deleteTitle": "Eliminar mi cuenta y mis datos",
+      "deleteBody": "Borra tu cuenta, sesiones, consentimientos y todo lo vinculado a ella. No se puede deshacer.",
+      "deleteButton": "Eliminar mi cuenta",
+      "dialogTitle": "¿Eliminar la cuenta definitivamente?",
+      "dialogBody": "Para confirmar, escribe el correo de tu cuenta: {{email}}",
+      "confirmLabel": "Correo de la cuenta",
+      "confirm": "Eliminar definitivamente"
+    },
+    "password": {
+      "titleSet": "Definir contraseña",
+      "titleChange": "Contraseña",
+      "descSet": "Tu cuenta aún no tiene contraseña: hoy entras solo con el enlace del correo.",
+      "descChange": "Cambiar la contraseña cierra las sesiones en los otros dispositivos.",
+      "current": "Contraseña actual",
+      "new": "Nueva contraseña",
+      "submit": "Guardar contraseña",
+      "done": "Contraseña guardada. Se cerraron las demás sesiones."
+    }
+  },
+  "mfa": {
+    "title": "Verificación en dos pasos",
+    "description": "Además del enlace por correo, pide un código de una app de autenticación (Google Authenticator, Microsoft Authenticator, 1Password y similares).",
+    "on": "Activa",
+    "off": "Desactivada",
+    "enable": "Activar",
+    "setupStep1": "1. Escanea el código QR con la app de autenticación.",
+    "setupManual": "¿Sin cámara? Escribe esta clave en la app:",
+    "setupStep2": "2. Escribe el código de 6 números que aparece en la app.",
+    "qrAlt": "Código QR para configurar la app de autenticación",
+    "confirm": "Confirmar y activar",
+    "enabledToast": "Verificación en dos pasos activada. Se cerraron las demás sesiones.",
+    "disable": "Desactivar",
+    "disableTitle": "Desactivar verificación en dos pasos",
+    "disableBody": "Escribe un código actual de la app de autenticación para confirmar.",
+    "disabledToast": "Verificación en dos pasos desactivada."
+  },
+  "legal": {
+    "draftNotice": "Borrador para revisión jurídica. Los campos entre corchetes deben completarse antes de publicar.",
+    "version": "Versión del {{date}}",
+    "privacy": {
+      "title": "Política de privacidad",
+      "sections": [
+        {
+          "title": "1. Quién trata tus datos",
+          "body": [
+            "AZ Internacional ([A COMPLETAR: razón social y número de empresa]) es la responsable de los datos tratados en esta plataforma.",
+            "Encargado(a) de protección de datos (DPO): [A COMPLETAR: nombre y correo de contacto]."
+          ]
+        },
+        {
+          "title": "2. Qué datos recopilamos",
+          "body": [
+            "Correo institucional de la escuela, nombre visible, idioma preferido y el registro de aceptación de estos documentos (fecha y versión).",
+            "Tu contraseña, guardada solo como hash irreversible (scrypt). Ni nuestro equipo puede leerla.",
+            "Datos técnicos de seguridad: sesiones de acceso, registros de auditoría (qué se hizo y cuándo, sin contenido) y la IP transformada en un código irreversible sin nuestra clave secreta.",
+            "No recopilamos documentos de identidad (CPF, RG), dirección, teléfono ni fecha de nacimiento."
+          ]
+        },
+        {
+          "title": "3. Para qué los usamos",
+          "body": [
+            "Permitir el acceso y mantener la cuenta segura; ofrecer orientación educativa sobre admisiones, universidades y estudios; cumplir obligaciones legales.",
+            "Bases legales (LGPD de Brasil): consentimiento del titular (art. 7, I); ejecución del servicio solicitado (art. 7, V); prevención de fraudes y seguridad (art. 7, IX)."
+          ]
+        },
+        {
+          "title": "4. Con quién los compartimos",
+          "body": [
+            "Solo con encargados necesarios para que el servicio funcione: Supabase (base de datos), Brevo (envío de correos), Render (servidor de la API), Vercel (sitio web) y Cloudflare (protección de red). Cuando se activen las funciones de inteligencia artificial, el contenido enviado para análisis pasará por OpenRouter y los modelos de IA usados.",
+            "Algunos de estos encargados procesan datos fuera de Brasil (transferencia internacional, art. 33 de la LGPD), con cláusulas contractuales de protección.",
+            "No vendemos datos ni los usamos para publicidad."
+          ]
+        },
+        {
+          "title": "5. Cuánto tiempo los guardamos",
+          "body": [
+            "Los enlaces de acceso valen 15 minutos; los de confirmación de correo, 24 horas; los de nueva contraseña, 30 minutos. Sus registros se borran en hasta 30 días. Las sesiones duran hasta 7 días.",
+            "Datos de la cuenta y registros de consentimiento: mientras exista la cuenta. Al eliminar la cuenta, todo se borra de inmediato; los registros de auditoría quedan hasta 12 meses sin vínculo contigo.",
+            "Las fotos del boletín, cuando exista esa función, se borrarán justo después del análisis; guardaremos solo notas y clasificaciones."
+          ]
+        },
+        {
+          "title": "6. Tus derechos",
+          "body": [
+            "Puedes confirmar y acceder a tus datos, corregirlos, pedir portabilidad, revocar el consentimiento y eliminar tu cuenta (art. 18 de la LGPD).",
+            "Tú mismo eliminas la cuenta en Configuración, en cualquier momento. Para las demás solicitudes, contacta al encargado de datos."
+          ]
+        },
+        {
+          "title": "7. Adolescentes",
+          "body": [
+            "La plataforma está dirigida a estudiantes a partir de 13 años. Tratamos los datos en el mejor interés del estudiante (art. 14 de la LGPD), con el consentimiento del propio titular, y no los usamos para publicidad ni perfiles comerciales."
+          ]
+        },
+        {
+          "title": "8. Seguridad",
+          "body": [
+            "Las contraseñas, enlaces y sesiones se guardan solo como hash; los secretos de la verificación en dos pasos están cifrados; el acceso a la base de datos se restringe por fila, de modo que cada estudiante solo accede a sus propios datos."
+          ]
+        },
+        {
+          "title": "9. Cambios en esta política",
+          "body": [
+            "Cada cambio genera una nueva versión con fecha. Cuando el cambio afecte el uso de tus datos, pediremos una nueva aceptación."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos de uso",
+      "sections": [
+        {
+          "title": "1. El servicio",
+          "body": [
+            "AZ Internacional es una plataforma de orientación educativa para estudiantes de secundaria. No garantiza la admisión en ningún proceso de selección."
+          ]
+        },
+        {
+          "title": "2. Tu cuenta",
+          "body": [
+            "El acceso se hace con el correo institucional de la escuela. La cuenta es personal: no compartas tu contraseña, enlaces de acceso ni códigos de verificación."
+          ]
+        },
+        {
+          "title": "3. Uso aceptable",
+          "body": [
+            "Está prohibido intentar acceder a datos de otras personas, eludir límites de uso, automatizar accesos sin autorización o usar la plataforma con fines ilícitos."
+          ]
+        },
+        {
+          "title": "4. Contenido generado por inteligencia artificial",
+          "body": [
+            "Parte del contenido lo genera la IA y puede contener errores. Notas de corte, precios y plazos son estimaciones: confírmalos siempre en las fuentes oficiales antes de decidir."
+          ]
+        },
+        {
+          "title": "5. Disponibilidad",
+          "body": [
+            "Trabajamos para mantener el servicio en línea, pero puede haber interrupciones por mantenimiento o por fallas de terceros."
+          ]
+        },
+        {
+          "title": "6. Cierre",
+          "body": [
+            "Puedes eliminar tu cuenta en cualquier momento. Podemos suspender cuentas usadas en contra de estos términos."
+          ]
+        },
+        {
+          "title": "7. Ley aplicable y contacto",
+          "body": [
+            "Estos términos se rigen por las leyes de Brasil. Foro: [A COMPLETAR]. Contacto: [A COMPLETAR: correo de soporte]."
+          ]
+        }
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "body": "La dirección puede haber cambiado o no existe.",
+    "home": "Ir al inicio"
+  },
+  "password": {
+    "show": "Mostrar contraseña",
+    "hide": "Ocultar contraseña"
+  }
+}

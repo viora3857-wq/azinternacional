@@ -1,0 +1,42 @@
+# Blueprint do Render para a API. Render > New > Blueprint > aponte para este repositório.
+# Deploy automático DESLIGADO: quem dispara é o GitHub Actions (.github/workflows/deploy.yml),
+# só depois do CI passar e das migrações rodarem.
+services:
+  - type: web
+    name: az-internacional-api
+    runtime: node
+    # Render não tem região no Brasil. Mantenha o Supabase na mesma região (us-east-1) para
+    # evitar ~120 ms por consulta; isso é transferência internacional, já declarada na política.
+    region: virginia
+    plan: starter
+    autoDeploy: false
+    buildCommand: npm ci --include=dev && npm run build -w @az/api
+    startCommand: node apps/api/dist/server.js
+    healthCheckPath: /api/health/ready
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      # Cliente -> Vercel (rewrite) -> balanceador do Render -> API = 2 saltos confiáveis.
+      - key: TRUST_PROXY_HOPS
+        value: '2'
+      - key: DATABASE_SSL
+        value: require
+      - key: EMAIL_PROVIDER
+        value: brevo
+      - key: EMAIL_FROM_NAME
+        value: AZ Internacional
+      # Segredos e valores do ambiente: preencha no painel do Render (não versionar).
+      - key: APP_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DATA_ENCRYPTION_KEY
+        sync: false
+      - key: HASH_PEPPER
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: EMAIL_FROM_ADDRESS
+        sync: false
